@@ -23,29 +23,29 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Başlıklar</h3>
+              <h3 class="box-title">Titles</h3>
             </div>
-
-            @include('includes.messages')
+          @include('includes.messages')      
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form" action="{{ route('tag.store') }}" method="post">
+            <form role="form" action="{{ route('category.update',$category->id) }}" method="post">
             {{ csrf_field() }}
+            {{ method_field('PUT') }}
               <div class="box-body">
               <div class="col-lg-offset-3 col-lg-6">
                 <div class="form-group">
-                  <label for="name">Etiket Başlığı</label>
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Tag Title">
+                  <label for="name">Kategori başlığı</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Category Title" value="{{ $category->name }}">
                 </div>
 
                 <div class="form-group">
-                  <label for="slug">Etiket Slug</label>
-                  <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug">
+                  <label for="slug">Kategori Slug</label>
+                  <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug" value="{{ $category->slug }}">
                 </div>
 
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">Gönder</button>
-                <a href='{{ route('tag.index') }}' class="btn btn-warning">Geri</a>
+                <a href='{{ route('category.index') }}' class="btn btn-warning">Geri</a>
               </div>
                 
               </div>

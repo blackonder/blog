@@ -1,7 +1,6 @@
 @extends('admin.layouts.app')
 
 @section('main-content')
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -21,44 +20,42 @@
     <section class="content">
       <div class="row">
         <div class="col-md-12">
-
-
-        <!-- general form elements -->
+          <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Başlıklar</h3>
+              <h3 class="box-title">Titles</h3>
             </div>
+          @include('includes.messages')      
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" action="{{ route('category.store') }}" method="post">
+            {{ csrf_field() }}
               <div class="box-body">
               <div class="col-lg-offset-3 col-lg-6">
-
                 <div class="form-group">
                   <label for="name">Kategori Başlığı</label>
                   <input type="text" class="form-control" id="name" name="name" placeholder="Kategori Başlığı">
                 </div>
 
-
-
                 <div class="form-group">
                   <label for="slug">Kategori Slug</label>
                   <input type="text" class="form-control" id="slug" name="slug" placeholder="Slug">
                 </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary">Sun</button>
-              </div>
 
-             
-             </div>
-             
-             </div>
-            
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Gönder</button>
+                <a href='{{ route('category.index') }}' class="btn btn-warning">Geri</a>
+              </div>
+                
+              </div>
+          
+        </div>
+
             </form>
           </div>
           <!-- /.box -->
 
-
+          
         </div>
         <!-- /.col-->
       </div>
@@ -67,5 +64,4 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
 @endsection

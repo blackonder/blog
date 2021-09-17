@@ -26,9 +26,9 @@
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Title</h3>
+        <h3 class="box-title">Başlık</h3>
         
-          <a class='col-lg-offset-5 btn btn-success' href="{{ route('post.create') }}">Add New</a>
+          <a class='col-lg-offset-5 btn btn-success' href="{{ route('post.create') }}">Yeni ekle</a>
         
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -48,12 +48,12 @@
                         <thead>
                         <tr>
                           <th>S.No</th>
-                          <th>Title</th>
-                          <th>Sub Title</th>
+                          <th>Başlık</th>
+                          <th>Alt başlık</th>
                           <th>Slug</th>
-                          <th>Creatd At</th>
-                          <th>Edit</th>
-                          <th>Delete</th>
+                          <th>Tarafından</th>
+                          <th>Düzenle</th>
+                          <th>Sil</th>
                           
                         </tr>
                         </thead>
@@ -93,15 +93,15 @@
                         <tfoot>
                         <tr>
                           <th>S.No</th>
-                          <th>Title</th>
-                          <th>Sub Title</th>
+                          <th>Başlık</th>
+                          <th>Alt başlık</th>
                           <th>Slug</th>
-                          <th>Creatd At</th>
+                          <th>Tarafından</th>
                           
-                          <th>Edit</th>
+                          <th>Düzenle</th>
                           
                            
-                          <th>Delete</th>
+                          <th>Sil</th>
                           
                         </tr>
                         </tfoot>
